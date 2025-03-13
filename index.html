@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="pl" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badanie RMP z Grzegorzem Niczyporukiem | Odkryj swoją motywację</title>
+    <meta name="description" content="Poznaj swoje prawdziwe motywatory dzięki badaniu RMP. Indywidualna sesja z certyfikowanym RMP masterem Grzegorzem Niczyporukiem.">
+    
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=general-sans@500,600,700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1e40af",
+                        secondary: "#0ea5e9",
+                        accent: "#f59e0b",
+                        dark: "#0f172a",
+                        light: "#f8fafc"
+                    },
+                    fontFamily: {
+                        sans: ["Satoshi", "sans-serif"],
+                        heading: ["General Sans", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
+    
+    <style>
+        html.has-scroll-smooth {
+            overflow: hidden;
+        }
+        
+        .has-scroll-smooth body {
+            overflow: hidden;
+        }
+        
+        .section-divider {
+            height: 120px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section-divider svg {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(to right, #1e40af, #0ea5e9);
+        }
+        
+        .pulse-button {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(14, 165, 233, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(14, 165, 233, 0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-light font-sans" data-scroll-container>
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <div class="text-2xl font-bold font-heading text-primary">Grzegorz<span class="text-accent">.</span>RMP</div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-dark hover:text-primary transition-colors font-medium" data-scroll-to>O metodzie</a>
+                    <a href="#process" class="text-dark hover:text-primary transition-colors font-medium" data-scroll-to>Jak to działa</a>
+                    <a href="#problem" class="text-dark hover:text-primary transition-colors font-medium" data-scroll-to>Problem z motywacją</a>
+                    <a href="#order" class="text-dark hover:text-primary transition-colors font-medium" data-scroll-to>Zamów badanie</a>
+                    <a href="#faq" class="text-dark hover:text-primary transition-colors font-medium" data-scroll-to>FAQ</a>
+                </div>
+                <div class="flex items-center">
+                    <a href="#contact" class="bg-primary hover:bg-primary/90 text-white py-2 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300 font-medium" data-scroll-to>Kontakt</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section data-scroll-section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-light to-blue-50 min-h-screen flex items-center">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-heading leading-tight">
+                        <span class="gradient-text">Badanie RMP</span> – Klucz do Twojej <span class="text-primary">Motywacji</span>
+                    </h1>
+                    <p class="mt-6 text-lg text-gray-700 leading-relaxed">
+                        RMP (Reiss Motivation Profile) to krótki, ale skuteczny program samorozwojowy, który w mniej niż 120 minut pomoże Ci zrozumieć, co naprawdę Cię napędza.
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row gap-4">
+                        <a href="#order" class="pulse-button bg-primary hover:bg-primary/90 text-white py-3 px-8 rounded-full text-center shadow-lg hover:shadow-xl transition-all duration-300 font-medium" data-scroll-to>
+                            Zamów badanie
+                        </a>
+                        <a href="#about" class="border-2 border-primary text-primary hover:bg-primary hover:text-white py-3 px-8 rounded-full text-center transition-all duration-300 font-medium" data-scroll-to>
+                            Dowiedz się więcej
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-secondary/20 rounded-full blur-3xl"></div>
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+                         alt="RMP Badanie Motywacji" 
+                         class="relative rounded-3xl shadow-2xl w-full object-cover" 
+                         data-scroll data-scroll-speed="1">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" data-scroll-section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold font-heading text-dark">
+                    Jak to <span class="gradient-text">działa?</span>
+                </h2>
+                <div class="w-24 h-1 bg-accent mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-blue-50 p-8 rounded-2xl shadow-md card-hover reveal" data-scroll data-scroll-offset="20%">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-dark mb-3">1. Wypełnij test</h3>
+                    <p class="text-gray-600">Wypełniasz standaryzowany test online, opracowany na podstawie metodyki prof. Stevena Reissa.</p>
+                </div>
+                
+                <div class="bg-blue-50 p-8 rounded-2xl shadow-md card-hover reveal" data-scroll data-scroll-offset="20%" data-scroll-delay="0.1">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-dark mb-3">2. Analiza wyników</h3>
+                    <p class="text-gray-600">Otrzymujesz precyzyjną analizę swojej motywacji w oparciu o naukowe badania.</p>
+                </div>
+                
+                <div class="bg-blue-50 p-8 rounded-2xl shadow-md card-hover reveal" data-scroll data-scroll-offset="20%" data-scroll-delay="0.2">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-dark mb-3">3. Sesja konsultacyjna</h3>
+                    <p class="text-gray-600">Bierzesz udział w indywidualnej sesji online, gdzie wspólnie omówimy Twoje wyniki.</p>
+                </div>
+                
+                <div class="bg-blue-50 p-8 rounded-2xl shadow-md card-hover reveal" data-scroll data-scroll-offset="20%" data-scroll-delay="0.3">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold font-heading text-dark mb-3">4. Praktyczne narzędzia</h3>
+                    <p class="text-gray-600">Otrzymasz praktyczne narzędzia do skutecznego wykorzystywania Twoich wewnętrznych motywatorów.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto reveal" data-scroll data-scroll-offset="20%">
+                    Zyskaj jasność co do swoich potrzeb i podejmuj lepsze decyzje – zawodowo i prywatnie.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="problem" data-scroll-section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1" data-scroll data-scroll-speed="1">
+                    <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Problem z motywacją" 
+                         class="rounded-3xl shadow-xl">
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading text-dark mb-6 reveal" data-scroll data-scroll-offset="20%">
+                        Problem z Motywacją – <span class="gradient-text">Dlaczego Nie Czujesz Satysfakcji?</span>
+                    </h2>
+                    <p class="text-gray-700 mb-6 reveal" data-scroll data-scroll-offset="20%">
+                        Motywacja to siła, która popycha nas do działania. Ale co, jeśli przestajesz czerpać radość z pracy, codziennych obowiązków czy nawet pasji? Czujesz, że brakuje Ci energii i zaangażowania, ale nie wiesz dlaczego?
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold font-heading text-dark mt-10 mb-4 reveal" data-scroll data-scroll-offset="20%">
+                        Kogo Dotyczy Ten Problem?
+                    </h3>
+                    <p class="text-gray-700 mb-6 reveal" data-scroll data-scroll-offset="20%">
+                        Nie ma jednej grupy zawodowej ani jednego typu osobowości, który zmaga się z kryzysem motywacji. Może to dotyczyć każdego, niezależnie od wieku, wykonywanego zawodu, sytuacji życiowej.
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold font-heading text-dark mt-10 mb-4 reveal" data-scroll data-scroll-offset="20%">
+                        Dlaczego Tak Się Dzieje?
+                    </h3>
+                    <p class="text-gray-700 mb-6 reveal" data-scroll data-scroll-offset="20%">
+                        Większość ludzi opiera swoją motywację na czynnikach zewnętrznych – nagrodach, oczekiwaniach innych, chwilowych celach. Problem w tym, że prawdziwa motywacja pochodzi z wewnątrz.
+                    </p>
+                    <p class="text-gray-700 mb-6 reveal" data-scroll data-scroll-offset="20%">
+                        Często mylimy to, czego chcemy, z tym, czego naprawdę potrzebujemy.
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold font-heading text-dark mt-10 mb-4 reveal" data-scroll data-scroll-offset="20%">
+                        Jak To Zmienić?
+                    </h3>
+                    <p class="text-gray-700 reveal" data-scroll data-scroll-offset="20%">
+                        Rozwiązaniem jest poznanie swojego profilu motywacyjnego RMP. Kiedy odkryjesz, co naprawdę napędza Cię do działania, będziesz w stanie podejmować decyzje zgodne z Twoimi wewnętrznymi potrzebami.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" data-scroll-section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold font-heading text-dark reveal" data-scroll data-scroll-offset="20%">
+                    Jak Zamówić <span class="gradient-text">Badanie Motywacji RMP?</span>
+                </h2>
+                <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto reveal" data-scroll data-scroll-offset="20%">
+                    Proces jest prosty i szybki – oto trzy kroki, które pozwolą Ci odkryć, co naprawdę Cię napędza
+                </p>
+                <div class="w-24 h-1 bg-accent mx-auto mt-6 rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white border border-gray-200 p-8 rounded-2xl shadow-lg card-hover relative reveal" data-scroll data-scroll-offset="20%">
+                    <div class="absolute -top-5 -left-5 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold">1</div>
+                    <h3 class="text-xl font-bold font-heading text-dark mb-4 mt-2">Zamów badanie</h3>
+                    <p class="text-gray-600">Zarezerwuj indywidualne badanie RMP poprzez formularz na tej stronie.</p>
+                </div>
+                
+                <div class="bg-white border border-gray-200 p-8 rounded-2xl shadow-lg card-hover relative reveal" data-scroll data-scroll-offset="20%" data-scroll-delay="0.1">
+                    <div class="absolute -top-5 -left-5 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold">2</div>
+                    <h3 class="text-xl font-bold font-heading text-dark mb-4 mt-2">Wypełnij test online</h3>
+                    <p class="text-gray-600">Po zamówieniu otrzymasz dostęp do testu online. Test składa się ze 128 pytań, a jego wypełnienie zajmie Ci około 30 minut. Wyniki testu dostępne są w przeciągu 24h.</p>
+                </div>
+                
+                <div class="bg-white border border-gray-200 p-8 rounded-2xl shadow-lg card-hover relative reveal" data-scroll data-scroll-offset="20%" data-scroll-delay="0.2">
+                    <div class="absolute -top-5 -left-5 w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold">3</div>
+                    <h3 class="text-xl font-bold font-heading text-dark mb-4 mt-2">Umów się na sesję</h3>
+                    <p class="text-gray-600">Po otrzymaniu wyników testu dostaniesz zaproszenie do wyboru terminu spotkania. Sesja trwa 90 minut i odbywa się online. Omówimy Twoje kluczowe motywatory i ich wpływ na Twoje życie.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="#contact" class="inline-block bg-primary hover:bg-primary/90 text-white py-4 px-10 rounded-full text-lg font-bold shadow-lg hover:shadow-xl transition-all duration-300 pulse-button" data-scroll-to>
+                    Zamów badanie RMP
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about-grzegorz" data-scroll-section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="grzegorz-niczyporuk.jpg" 
+                         alt="Grzegorz Niczyporuk" 
+                         class="rounded-3xl shadow-xl w-full object-cover" 
+                         data-scroll data-scroll-speed="1">
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading text-dark mb-6 reveal" data-scroll data-scroll-offset="20%">
+                        Kim jest <span class="gradient-text">Grzegorz?</span>
+                    </h2>
+                    <p class="text-gray-700 mb-6 reveal" data-scroll data-scroll-offset="20%">
+                        Coach, mentor, certyfikowany RMP master. Manager jakości IT. Członek Stowarzyszenia Jakości Systemów Informatycznych.
+                    </p>
+                    <p class="text-xl font-bold text-accent mb-6 reveal" data-scroll data-scroll-offset="20%">
+                        Magik jakości.
+                    </p>
+                    <p class="text-gray-700 mb-6 reveal" data-scroll data-scroll-offset="20%">
+                        W IT zajmuję się dostarczaniem procesów kultury i zespołów, które zapewniają jakość. W konsultingu pomagam odnajdywać klientom indywidualnym motywację. Pomiędzy - jestem pasjonatem iluzji z ponad dwunastoletnim doświadczeniem.
+                    </p>
+                    <p class="text-gray-700 mb-6 reveal" data-scroll data-scroll-offset="20%">
+                        Mam na koncie 8 lat budowania zespołów i zarządzania nimi dla takich firm jak Nokia, Sii czy Credit Suisse. Od strony przekazywania wiedzy to ponad 100 prelekcji wewnętrznych dla klientów biznesowych. Jako jeden z najbardziej doświadczonych RMP Masterów w Polsce zrealizowałem blisko 150 konsultacji indywidualnych. Do tego, rzecz jasna, 750 komercyjnych pokazów iluzjonistycznych.
+                    </p>
+                    <p class="text-gray-700 reveal" data-scroll data-scroll-offset="20%">
+                        Swoją wiedzą i pasją do motywacji wewnętrznej dzieliłem się na konferencjach w całej Europie. Były to Test:fest, TestDive, SEETEST, HUSTEF, Agile Testing Days, Conf42, Romanian Test Conference.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" data-scroll-section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold font-heading text-dark reveal" data-scroll data-scroll-offset="20%">
+                    Najczęściej <span class="gradient-text">Zadawane Pytania</span>
+                </h2>
+                <div class="w-24 h-1 bg-accent mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="bg-blue-50 rounded-2xl p-6 shadow-md reveal" data-scroll data-scroll-offset="20%">
+                    <h3 class="text-xl font-bold font-heading text-dark mb-3">W jakim języku mogę wykonać test?</h3>
+                    <p class="text-gray-700">Test można wykonać w języku polskim lub angielskim.</p>
+                </div>
+                
+                <div class="bg-blue-50 rounded-2xl p-6 shadow-md reveal" data-scroll data-scroll-offset="20%">
+                    <h3 class="text-xl font-bold font-heading text-dark mb-3">Jak wygląda sam test?</h3>
+                    <p class="text-gray-700">Sam test to 128 pytań, w których określasz, jak bardzo zgadzasz się (lub nie) z przedstawionym stwierdzeniem. Jego wykonanie zajmuje około 30 minut i należy go zrobić w całości. Jeśli przerwiesz test i wrócisz do niego, udzielone wcześniej odpowiedzi nie będą zapisane - test trzeba będzie zacząć od nowa.</p>
+                </div>
+                
+                <div class="bg-blue-50 rounded-2xl p-6 shadow-md reveal" data-scroll data-scroll-offset="20%">
+                    <h3 class="text-xl font-bold font-heading text-dark mb-3">Czy można zwrócić test, jeśli się nie spodoba?</h3>
+                    <p class="text-gray-700">Nie. Po wykorzystaniu danych logowania do badania nie można już zwrócić testu, gdyż kwestionariusz zostaje wtedy przypisany do Twojego adresu mailowego.</p>
+                </div>
+                
+                <div class="bg-blue-50 rounded-2xl p-6 shadow-md reveal" data-scroll data-scroll-offset="20%">
+                    <h3 class="text-xl font-bold font-heading text-dark mb-3">Komu ten test jest niepotrzebny?</h3>
+                    <p class="text-gray-700">Tym, którzy nie są gotowi na świadome podejście do swojego życia. Ignorantom, ludziom, którzy nie chcą świadomie podchodzić do swojego życia.</p>
+                </div>
+                
+                <div class="bg-blue-50 rounded-2xl p-6 shadow-md reveal" data-scroll data-scroll-offset="20%">
+                    <h3 class="text-xl font-bold font-heading text-dark mb-3">Jak szybko dostanę wyniki?</h3>
+                    <p class="text-gray-700">Wyniki są dostępne w przeciągu 24h. Przekażę Ci je podczas naszej indywidualnej sesji.</p>
+                </div>
+                
+                <div class="bg-blue-50 rounded-2xl p-6 shadow-md reveal" data-scroll data-scroll-offset="20%">
+                    <h3 class="text-xl font-bold font-heading text-dark mb-3">Czy sesja online z Grzegorzem jest konieczna?</h3>
+                    <p class="text-gray-700">Tak. Sesja online jest nieodłącznym elementem badania - pozwala ona zaadresować najważniejsze pytania i zgłębić informacje zawarte w wynikach.</p>
+                </div>
+                
+                <div class="bg-blue-50 rounded-2xl p-6 shadow-md reveal" data-scroll data-scroll-offset="20%">
+                    <h3 class="text-xl font-bold font-heading text-dark mb-3">Co z poczuciem prywatności?</h3>
+                    <p class="text-gray-700">Sesja nie jest nagrywana i obowiązuje na niej zasada Vegas (co się dzieje w Vegas zostaje w Vegas).</p>
+                </div>
+                
+                <div class="bg-blue-50 rounded-2xl p-6 shadow-md reveal" data-scroll data-scroll-offset="20%">
+                    <h3 class="text-xl font-bold font-heading text-dark mb-3">Jeśli chcę tylko test, bez sesji, czy mogę go kupić?</h3>
+                    <p class="text-gray-700">Nie. Test i sesja to nieodłączne i komplementarne elementy.</p>
+                </div>
+                
+                <div class="bg-blue-50 rounded-2xl p-6 shadow-md reveal" data-scroll data-scroll-offset="20%">
+                    <h3 class="text-xl font-bold font-heading text-dark mb-3">Jak bardzo boli ten test?</h3>
+                    <p class="text-gray-700">Zależy na czym siedzisz rozwiązując test. A na serio - nie boli. Wcale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" data-scroll-section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-primary/5 to-secondary/5">
+        <div class="max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold font-heading text-dark mb-6 reveal" data-scroll data-scroll-offset="20%">
+                        Gotowy odkryć swoją <span class="gradient-text">prawdziwą motywację?</span>
+                    </h2>
+                    <p class="text-gray-700 mb-8 reveal" data-scroll data-scroll-offset="20%">
+                        Wypełnij formularz, a odezwę się do Ciebie w ciągu 24 godzin, aby ustalić szczegóły i rozpocząć badanie RMP.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8 reveal" data-scroll data-scroll-offset="20%">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-dark">Email</h3>
+                                <p class="text-gray-600">kontakt@grzegorz-rmp.pl</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-dark">Telefon</h3>
+                                <p class="text-gray-600">+48 xxx xxx xxx</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-3xl p-8 shadow-xl reveal" data-scroll data-scroll-offset="20%">
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Imię i nazwisko</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Telefon</label>
+                            <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Wiadomość (opcjonalnie)</label>
+                            <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <div>
+                            <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white py-3 px-6 rounded-lg transition-all duration-300 font-medium">
+                                Wyślij wiadomość
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer data-scroll-section class="bg-dark text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="text-2xl font-bold font-heading mb-6">Grzegorz<span class="text-accent">.</span>RMP</div>
+                    <p class="text-gray-400 mb-6">
+                        Profesjonalne badanie motywacji RMP, które pomoże Ci odkryć, co naprawdę Cię napędza i jak wykorzystać tę wiedzę w życiu zawodowym i prywatnym.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold font-heading mb-6">Kontakt</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <span class="text-gray-400">kontakt@grzegorz-rmp.pl</span>
+                        </div>
+                        <div class="flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-400 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                            <span class="text-gray-400">+48 xxx xxx xxx</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold font-heading mb-6">Obserwuj mnie</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-12 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2023 Grzegorz RMP. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.1/dist/locomotive-scroll.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Locomotive Scroll (smooth scroll)
+            const scroll = new LocomotiveScroll({
+                el: document.querySelector('[data-scroll-container]'),
+                smooth: true,
+                smoothMobile: false,
+                multiplier: 1,
+            });
+
+            const revealElements = document.querySelectorAll('.reveal');
+
+
+            const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+   
+                entry.target.classList.add('active');
+                
+                }
+            });
+            }, {
+            threshold: 0.1, 
+            rootMargin: '0px'
+            });
+
+            // Observer na kazdy element z animacja
+            revealElements.forEach(element => {
+            observer.observe(element);
+            });
+
+            // Update scroll when resizing
+            window.addEventListener('resize', () => {
+                setTimeout(() => {
+                    scroll.update();
+                }, 500);
+            });
+            
+        
+            const backToTopBtn = document.getElementById('backToTop');
+            
+            window.addEventListener('scroll', function() {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.remove('opacity-0', 'invisible');
+                    backToTopBtn.classList.add('opacity-100', 'visible');
+                } else {
+                    backToTopBtn.classList.add('opacity-0', 'invisible');
+                    backToTopBtn.classList.remove('opacity-100', 'visible');
+                }
+            });
+            
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const phone = document.getElementById('phone').value;
+                    
+                    if (!name || !email || !phone) {
+                        alert('Proszę wypełnić wszystkie wymagane pola.');
+                        return;
+                    }
+                    
+                    // Do implementacji
+
+                    alert('Dziękujemy za wiadomość! Odezwiemy się do Ciebie w ciągu 24 godzin.');
+                    contactForm.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
